@@ -104,3 +104,38 @@ html{scroll-behavior:auto}
 @media(max-width:900px){.atelier{grid-template-columns:1fr;min-height:0;gap:35px}.atelier h2{font-size:clamp(50px,10vw,85px)}.atelier-image{height:540px}.reveal-frame{width:75vw;height:62vh}}
 @media(max-width:600px){.atelier{padding-top:80px;padding-bottom:80px}.atelier-image{height:410px}.atelier h2{font-size:50px}.reveal-frame{width:80vw;height:58vh}.horizontal-stage{min-height:570px}.feature-card{width:72vw;min-width:72vw}.feature-image{height:49vh}.collection-heading{width:65vw;min-width:65vw;padding:0 6vw}}
 @media(prefers-reduced-motion:reduce){.reveal-depth,.reveal-depth img,.horizontal-track{will-change:auto}.outline-button span,.solid-button span,.underline-link span{transition:none}}
+
+/* Premium Google review source panel */
+.reviews-section{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(320px,.9fr);gap:7vw;align-items:center;background:#ebe6de;border-top:1px solid #d7d0c6;border-bottom:1px solid #d7d0c6}
+.reviews-intro h2{font:400 clamp(48px,6vw,92px)/1.1 var(--serif);letter-spacing:-.05em;margin:28px 0}
+.reviews-intro>p:last-child{font-size:14px;color:#70665f;line-height:1.9}
+.reviews-summary{border-left:1px solid #cfc7bd;padding:25px 0 25px 6vw;display:flex;flex-direction:column;align-items:flex-start;gap:14px}
+.review-stars{color:#a67b46;letter-spacing:.3em;font-size:19px}
+.reviews-summary>strong{font:400 clamp(65px,8vw,110px)/1 var(--serif);letter-spacing:-.07em}
+.reviews-summary>strong small{font:400 22px var(--font);letter-spacing:0;color:#776e64}
+.reviews-summary>p{font-size:14px;margin:0 0 14px}
+.reviews-disclaimer{display:block;font-size:11px;line-height:1.7;color:#81786d;max-width:390px;margin-top:16px}
+.atelier.section-pad{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:6vw;align-items:center}
+.atelier-copy{min-width:0}.atelier-image{min-width:0}
+.checkout-modal{width:min(1080px,95vw);max-height:94vh;overflow-y:auto}
+.checkout-modern{max-width:none}
+.checkout-layout{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(260px,.8fr);gap:42px;margin-top:28px}
+.checkout-main{min-width:0}
+.checkout-steps{display:flex;gap:10px;flex-wrap:wrap;padding:14px 0 22px;border-bottom:1px solid var(--line);margin-bottom:20px}
+.checkout-steps span{font-size:10px;letter-spacing:.12em;color:var(--muted)}
+.checkout-steps span:first-child{color:var(--ink);font-weight:700}
+.checkout-aside{background:#f3f0eb;padding:28px;align-self:start}
+.checkout-item{display:flex;gap:12px;align-items:center;padding:13px 0;border-bottom:1px solid var(--line)}
+.checkout-item img{width:55px;height:70px;object-fit:cover}
+.checkout-item>div{flex:1;min-width:0}.checkout-item strong{font-size:12px;display:block}.checkout-item small{font-size:11px;display:block;color:var(--muted);margin-top:5px}
+.checkout-item b{font-size:12px;white-space:nowrap}
+.checkout-line{display:flex;justify-content:space-between;gap:12px;font-size:13px;margin-top:18px}
+.checkout-grand{font-size:18px;padding-top:18px;border-top:1px solid var(--line)}
+.demo-card-panel{padding:18px 0}
+.card-visual{max-width:350px;aspect-ratio:1.7;border-radius:14px;background:linear-gradient(125deg,#38302e,#78685d);color:#f7f3eb;padding:24px;display:flex;flex-direction:column;justify-content:space-between;margin-bottom:20px;box-shadow:0 15px 30px #211c1a18}
+.card-visual span{font-size:10px;letter-spacing:.19em}.card-visual strong{font-size:21px;letter-spacing:.12em}.card-visual small{font-size:9px;letter-spacing:.12em}
+.checkout-hint{font-size:11px;line-height:1.7;color:#786f67}
+.checkout-consent{display:flex;gap:12px;align-items:flex-start;font-size:12px;line-height:1.6;margin:22px 0}
+.checkout-consent input{margin-top:4px;flex-shrink:0}
+@media(max-width:900px){.reviews-section{grid-template-columns:1fr;gap:30px}.reviews-summary{border-left:0;border-top:1px solid #cfc7bd;padding:30px 0 0}.atelier.section-pad{grid-template-columns:1fr}.checkout-layout{grid-template-columns:1fr}.checkout-aside{order:-1}.checkout-modal{width:96vw}}
+@media(max-width:600px){.reviews-section{padding-top:75px;padding-bottom:75px}.reviews-intro h2{font-size:53px}.atelier-image{height:490px}.checkout-modern h2{font-size:43px}.checkout-aside{padding:18px}.checkout-layout{gap:20px}.card-visual{max-width:100%}}
