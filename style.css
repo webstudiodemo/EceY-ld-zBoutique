@@ -153,3 +153,20 @@ html{scroll-behavior:auto}
 .reviews-footer p{font-size:13px}.reviews-footer small{color:#827970}
 @media(max-width:900px){.reviews-cards{grid-template-columns:1fr 1fr}.review-card{min-height:260px}}
 @media(max-width:600px){.reviews-cards{grid-template-columns:1fr}.review-card{min-height:0;padding:26px}.reviews-footer{align-items:flex-start;flex-direction:column}.reviews-section .reviews-intro{margin-bottom:25px}}
+
+/* Final QA: dialog scroll, keyboard focus and motion fallbacks */
+.modal.open,.drawer.open{overflow-y:auto;overscroll-behavior:contain;-webkit-overflow-scrolling:touch}
+.modal.open input,.modal.open select,.modal.open textarea{scroll-margin-block:80px}
+.modal[aria-hidden="true"],.drawer[aria-hidden="true"]{pointer-events:none}
+.mobile-nav[aria-hidden="true"]{visibility:hidden;pointer-events:none}
+.mobile-nav.open{visibility:visible;pointer-events:auto}
+.review-card blockquote{overflow-wrap:anywhere}
+@media (hover:none){.product-card:hover img,.feature-card:hover img,.category-tiles a:hover img{transform:none}}
+@media(prefers-reduced-motion:reduce){
+ .horizontal-section{height:auto!important;min-height:0!important;overflow:hidden}
+ .horizontal-stage{height:auto!important;min-height:0!important;display:block}
+ .horizontal-track{transform:none!important;display:flex;overflow-x:auto;scroll-snap-type:x proximity;overscroll-behavior-x:contain;padding-bottom:18px;-webkit-overflow-scrolling:touch}
+ .feature-card{scroll-snap-align:start}
+ .reveal-frame,.reveal-depth,.reveal-depth img{transform:none!important}
+ .reveal-overlay{opacity:1!important}
+}
