@@ -139,3 +139,17 @@ html{scroll-behavior:auto}
 .checkout-consent input{margin-top:4px;flex-shrink:0}
 @media(max-width:900px){.reviews-section{grid-template-columns:1fr;gap:30px}.reviews-summary{border-left:0;border-top:1px solid #cfc7bd;padding:30px 0 0}.atelier.section-pad{grid-template-columns:1fr}.checkout-layout{grid-template-columns:1fr}.checkout-aside{order:-1}.checkout-modal{width:96vw}}
 @media(max-width:600px){.reviews-section{padding-top:75px;padding-bottom:75px}.reviews-intro h2{font-size:53px}.atelier-image{height:490px}.checkout-modern h2{font-size:43px}.checkout-aside{padding:18px}.checkout-layout{gap:20px}.card-visual{max-width:100%}}
+
+/* Three authentic customer-submitted Google reviews */
+.reviews-section.section-pad{display:block}
+.reviews-section .reviews-intro{max-width:740px;margin-bottom:40px}
+.reviews-cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.review-card{display:flex;flex-direction:column;min-width:0;min-height:300px;padding:32px;background:#faf8f4;border:1px solid #e4ddd3}
+.review-card .review-stars{font-size:17px;letter-spacing:.22em}
+.review-card blockquote{margin:24px 0 34px;font:400 14px/1.85 var(--font);color:#39312e;flex:1}
+.review-person{border-top:1px solid #e0d8ce;padding-top:17px;display:flex;flex-direction:column;gap:5px}
+.review-person strong{font-size:13px}.review-person span{font-size:11px;color:#80756c}
+.reviews-footer{display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap;margin-top:30px}
+.reviews-footer p{font-size:13px}.reviews-footer small{color:#827970}
+@media(max-width:900px){.reviews-cards{grid-template-columns:1fr 1fr}.review-card{min-height:260px}}
+@media(max-width:600px){.reviews-cards{grid-template-columns:1fr}.review-card{min-height:0;padding:26px}.reviews-footer{align-items:flex-start;flex-direction:column}.reviews-section .reviews-intro{margin-bottom:25px}}
