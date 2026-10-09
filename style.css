@@ -191,3 +191,16 @@ html{scroll-behavior:auto}
  .modal{max-height:calc(100dvh - 24px)}
 }
 @media(prefers-reduced-motion:reduce){.horizontal-stage{height:auto!important}.horizontal-track{transform:none!important}}
+
+/* Scoped QA: seamless marquee and touch-scrollable product/checkout overlays */
+.marquee-track{display:flex;width:max-content;animation:marquee 112s linear infinite}
+.marquee-track>span{display:block;flex:0 0 auto;white-space:nowrap}
+.modal.open{overflow-x:hidden;overflow-y:auto;touch-action:pan-y;overscroll-behavior-y:contain;-webkit-overflow-scrolling:touch}
+.drawer.open .cart-items{touch-action:pan-y;overscroll-behavior-y:contain;-webkit-overflow-scrolling:touch}
+@media(max-width:600px){
+ .marquee-track{animation:marquee 112s linear infinite}
+ .modal.open{top:12px;bottom:auto;left:50%;width:calc(100vw - 24px);max-height:calc(100dvh - 24px);transform:translateX(-50%);overflow-y:auto}
+ .product-detail{min-height:0}
+ .product-detail-content{padding-bottom:max(28px,env(safe-area-inset-bottom))}
+}
+@media(prefers-reduced-motion:reduce){.marquee-track{animation:none!important}}
